@@ -1,0 +1,289 @@
+/* ReliefSync AI - clean, minimal UI (no fancy stuff) */
+:root {
+  --bg: #0b1220;
+  --panel: #0f1a2e;
+  --panel-2: #101f39;
+  --text: #e8eefc;
+  --muted: #a8b3cc;
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #67e8f9;
+  --danger: #fb7185;
+  --warn: #fbbf24;
+  --ok: #34d399;
+  --shadow: rgba(0, 0, 0, 0.35) 0 14px 30px -18px;
+
+  color-scheme: dark;
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  background: var(--bg);
+  color: var(--text);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 16px 40px;
+}
+
+.appShell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel), rgba(15, 26, 46, 0.65));
+  padding: 18px 14px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  display: grid;
+  gap: 2px;
+  padding: 10px 10px 16px;
+}
+
+.brand h1 {
+  font-size: 16px;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.brand p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.nav {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+}
+
+.nav a {
+  padding: 10px 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--muted);
+  background: transparent;
+}
+
+.nav a[aria-current='page'] {
+  color: var(--text);
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.main {
+  padding: 16px;
+}
+
+.pageHeader {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.pageHeader h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.pageHeader p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: var(--shadow);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.kpi {
+  display: grid;
+  gap: 2px;
+  min-width: 140px;
+}
+
+.kpi .label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.kpi .value {
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  border-color: rgba(103, 232, 249, 0.3);
+  background: rgba(103, 232, 249, 0.12);
+}
+
+.btnDanger {
+  border-color: rgba(251, 113, 133, 0.35);
+  background: rgba(251, 113, 133, 0.14);
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text);
+}
+
+.textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.listItem {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pillUrgent {
+  border-color: rgba(251, 113, 133, 0.45);
+  color: #ffd3da;
+  background: rgba(251, 113, 133, 0.12);
+}
+
+.pillHigh {
+  border-color: rgba(251, 191, 36, 0.5);
+  color: #ffe8b0;
+  background: rgba(251, 191, 36, 0.12);
+}
+
+.pillNormal {
+  border-color: rgba(52, 211, 153, 0.35);
+  color: #c7ffea;
+  background: rgba(52, 211, 153, 0.10);
+}
+
+.map {
+  height: 360px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(1200px 500px at 30% 10%, rgba(103, 232, 249, 0.16), transparent),
+    radial-gradient(900px 400px at 70% 60%, rgba(251, 113, 133, 0.12), transparent),
+    rgba(255, 255, 255, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.mapLegend {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mapPin {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: rgba(0, 0, 0, 0.45) 0 10px 14px -10px;
+}
+
+@media (max-width: 980px) {
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
